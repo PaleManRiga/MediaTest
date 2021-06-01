@@ -215,3 +215,115 @@ li {
   padding: 21px 75px 20px 45px;
   border-top: 1px solid #bbbbbb;
 }
+
+// news
+.news__title {
+  margin-left: 45px;
+  @include q700;
+  font-size: 50px;
+  line-height: 60px;
+}
+.news__items {
+  margin-left: 45px;
+  margin-right: 45px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.news__item {
+  max-width: 382px;
+  width: 100%;
+  &-img {
+    position: relative;
+    width: 382px;
+    height: 382px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .news__item-text {
+      position: absolute;
+      bottom: 0;
+      @include q700;
+      font-size: 20px;
+      color: #fff;
+      max-width: 272px;
+      width: 100%;
+      left: 20px;
+      padding-left: 20px;
+    }
+  }
+}
+.news__btn {
+  position: relative;
+  padding: 17px 85px 18px 49px;
+  background-color: #30333c;
+  color: #fff;
+  border-radius: 30px;
+  margin-top: 50px;
+  @include q700;
+  font-size: 20px;
+  line-height: 32px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/btnarrow.png);
+    width: 34px;
+    height: 23px;
+    right: 26px;
+    transform: translateY(25%);
+  }
+}
+
+// contact
+
+.contact__people {
+  max-width: 657px;
+  width: 100%;
+  background-color: #e6f1ff;
+}
+.contact__people-items {
+  margin-top: 120px;
+  padding-top: 110px;
+  margin-left: 74px;
+}
+.contact__people-item {
+  display: flex;
+  align-items: center;
+  max-width: 432px;
+  width: 100%;
+  gap: 30px;
+  & + .contact__people-item {
+    margin-top: 47px;
+  }
+  a {
+    display: block;
+  }
+  &--img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -10px;
+  }
+  .name {
+    @include q700;
+    font-size: 26px;
+    line-height: 32px;
+    color: #6f88b1;
+    margin: 0;
+  }
+  .email {
+    @include m400;
+    font-size: 18px;
+    line-height: 29px;
+  }
+  .phone {
+    @include m400;
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
