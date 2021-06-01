@@ -1,0 +1,31 @@
+// Montserrat mixin
+@mixin m400 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+@mixin m500 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+@mixin m600 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+  }
+@mixin m700 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+// Quicksand mixin
+@mixin q400 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+  }
+  @mixin q500 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+  }
+  @mixin q700 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+  }
