@@ -265,6 +265,7 @@ li {
   @include q700;
   font-size: 20px;
   line-height: 32px;
+  margin-bottom: 100px;
 
   &::after {
     content: "";
@@ -279,13 +280,21 @@ li {
 
 // contact
 
+
+.contact__inner {
+  display: flex;
+  align-items: center;
+}
 .contact__people {
   max-width: 657px;
   width: 100%;
   background-color: #e6f1ff;
+  clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
+  max-height: 772px;
+  height: 100vh;
 }
 .contact__people-items {
-  margin-top: 120px;
+  // margin-top: 120px;
   padding-top: 110px;
   margin-left: 74px;
 }
@@ -327,3 +336,107 @@ li {
     line-height: 29px;
   }
 }
+
+.form__title {
+  @include q700;
+  font-size: 50px;
+  line-height: 60px;
+  color: #6F88B1;
+  max-width: 497px;
+  width: 100%;
+}
+.form__item {
+  max-width: 527px;
+  width: 100%;
+  & + .form__item {
+    margin-top: 44px;
+  }
+}
+.form__input {
+  border: none;
+  border-bottom: solid 1px #6F88B1;
+  width: 100%;
+  @include m400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #70737C;
+}
+._error {
+  border-color: red;
+}
+.checkbox__label {
+  @include m400;
+  font-size: 18px;
+  line-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transform: scale(1);
+  margin-bottom: 42px;
+  &::before {
+    content: '';
+    align-self: flex-start;
+    flex: 0 0 28px;
+    height: 28px;
+    background-color: #fff;
+    border: solid 1px #6F88B1;
+    margin: 0 19px 0 0;
+  }
+  &::after {
+    transition: transform 0.5s ease 0s;
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background-color: #86A0C9;
+    transform: scale(0);
+  }
+}
+.checkbox__input {
+  display: none;
+  &:checked + .checkbox__label::after {
+      transform: scale(1);
+  }
+
+}
+.form__button {
+  position: relative;
+  background-color: #D9DBE2;
+  color: #fff;
+  padding: 18px 100px 17px 46px;
+  border-radius: 40px;
+  @include q700;
+  font-size: 20px;
+  line-height: 32px;
+  border: none;
+  cursor: pointer;
+  &:active {
+    background-color: #30333C;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/btnarrow.png);
+    width: 34px;
+    height: 23px;
+    right: 45px;
+    transform: translateY(25%);
+  }
+}
+
+// footer
+.footer__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &--items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+  }
+}
+
