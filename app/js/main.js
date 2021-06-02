@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
 
         let error = formValidate(form);
+
+        if (error === 0) {
+
+            form.submit();
+        } 
+
     }
 
     function formValidate(form) {
@@ -35,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        // return error;
+        return error;
     }
 
     function formAddError(input) {
@@ -51,5 +57,17 @@ document.addEventListener('DOMContentLoaded', function () {
         return !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(input.value);
     }
 
-
+    
 });
+const swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 88,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });

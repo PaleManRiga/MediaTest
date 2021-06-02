@@ -1,4 +1,5 @@
 @import "vars";
+@import "fonts";
 
 html {
   box-sizing: border-box;
@@ -29,11 +30,17 @@ li {
 }
 
 .header__navigation {
+  position: fixed;
+  z-index: 1000;
+  background-color: #fff;
+  top: 0;
+  max-width: 1307px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 21px 0;
-  margin: 0 99px 0 127px;
+  // margin: 0 99px 0 127px;
   .logo {
     @include q700;
     font-size: 22px;
@@ -53,6 +60,7 @@ li {
 }
 
 .header__hero {
+  margin-top: 71px;
   position: relative;
   max-height: 787px;
   height: 100vh;
@@ -86,14 +94,33 @@ li {
 }
 
 // slider
-
+.swiper-button-next{
+    background-image: url(../images/arrow-right.png);
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: rgba(239, 245, 255, 0);
+    color: rgba($color: #000000, $alpha: 0);
+    z-index: 2;
+    cursor: pointer;
+}
+.swiper-button-prev {
+  background-image: url(../images/arrow-left.png);
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: rgba(239, 245, 255, 0);
+  z-index: 2;
+  color: rgba($color: #000000, $alpha: 0);
+  cursor: pointer;
+}
 .slider {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 79px;
-  .slider__btn-right {
+  .slider__btn-right{
     position: absolute;
     right: 0;
     background-image: url(../images/arrow-right.png);
@@ -116,7 +143,10 @@ li {
     cursor: pointer;
   }
 }
-.slider__item {
+.swiper-slide {
+  z-index: 5;
+}
+.slider__item, .swiper-slide {
   position: relative;
   max-width: 348px;
   width: 100%;
@@ -125,7 +155,7 @@ li {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  z-index: 1;
+  z-index: 5;
   box-shadow: 5px 5px 15px 5px #bbbbbb;
   &-img {
     background-repeat: no-repeat;
@@ -180,15 +210,6 @@ li {
     border-radius: 40px;
     padding: 18px 46px;
   }
-  //   select::after {
-  //     content: "";
-  //     position: absolute;
-  //     background-image: url(../images/arrow-down.png);
-  //     width: 13px;
-  //     height: 23px;
-  //     right: 0;
-  //     top: 0;
-  //   }
 }
 .flats__box {
   border-radius: 20px;
@@ -428,15 +449,69 @@ li {
 }
 
 // footer
-.footer__menu {
+.footer {
+  margin-top: 42px;
+}
+.footer__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #30333C;
+  color: #fff;
+  padding-bottom: 50px;
+}
+.footer__menu {
+  
   &--items {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 700px;
+    gap: 150px;
+    margin-top: 25px;
+    margin-left: 102px;
+  }
+
+  &--item {
+    &-title {
+      @include q700;
+      font-size: 26px;
+      line-height: 32px;
+    }
+    &-option {
+      display: block;
+      @include m500;
+      font-size: 18px;
+      line-height: 32px;
+      color: #fff;
+      margin-top: 15px;
+    }
+  }
+}
+.footer__logos {
+  display: flex;
+  align-self: flex-end;
+  gap: 43px;
+  margin-right: 92px;
+
+}
+.footer__logo-fb {
+  &::before {
+    content: "\ea90";
+    font-family: "icomoon";
+    color: #fff;
+    font-size: 20px;
+
+  }
+}
+.footer__logo-inst {
+  &::before {
+    content: "\ea92";
+    font-family: "icomoon";
+    color: #fff;
+    font-size: 20px;
   }
 }
 
+.swiper-container {
+  z-index: 5;
+}
