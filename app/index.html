@@ -7,6 +7,7 @@
   <title>NTPROJECT</title>
   <link rel="stylesheet" href="css/libs.min.css" />
   <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/media.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Quicksand:wght@400;500;700&display=swap"
@@ -14,17 +15,18 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
 
 
     <div class="container">
+      
       <nav class="header__navigation">
         <a class="logo" href="#"> NTPROJECT </a>
         <ul class="header__navigation-list">
-          <li><a href="#">Pradžia</a></li>
-          <li><a href="#">Pasiūlymai</a></li>
-          <li><a href="#">Naujienos</a></li>
-          <li><a href="#">Kontaktai</a></li>
+          <li><a href="#header">Pradžia</a></li>
+          <li><a href="#flats">Pasiūlymai</a></li>
+          <li><a href="#news">Naujienos</a></li>
+          <li><a href="#contact">Kontaktai</a></li>
         </ul>
       </nav>
 
@@ -78,8 +80,7 @@
             </div>
             ...
           </div>
-
-          <!-- If we need navigation buttons -->
+          
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
 
@@ -91,7 +92,7 @@
     </div>
   </header>
 
-  <section class="flats">
+  <section class="flats" id="flats">
     <div class="container">
       <div class="flats__box">
         <div class="flats__box-btns">
@@ -228,7 +229,7 @@
     </div>
   </section>
 
-  <section class="news">
+  <section class="news" id="news">
     <div class="container">
       <h1 class="news__title">Naujienos</h1>
       <div class="news__items">
@@ -281,7 +282,7 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <div class="container">
       <div class="contact__inner">
         <div class="contact__people">
@@ -320,19 +321,15 @@
             <form action="#" id="form" class="form__body">
               <h1 class="form__title">Sužinok apie projektą daugiau</h1>
               <div class="form__item">
-                <!-- <label for="forName" class="form__label"></label> -->
                 <input id="formName" type="text" name="name" class="form__input _req " placeholder="Jūsų vardas">
               </div>
               <div class="form__item">
-                <!-- <label for="forEmail" class="form__label"></label> -->
                 <input id="formEmail" type="text" name="email" class="form__input _req _email" placeholder="El. Paštas">
               </div>
               <div class="form__item">
-                <!-- <label for="forTel" class="form__label"></label> -->
                 <input id="formTel" type="text" name="tel" class="form__input _req" placeholder="Telefono numeris">
               </div>
               <div class="form__item">
-                <!-- <label for="forMessage" class="form__label"></label> -->
                 <input id="formMessage" type="text" name="message" class="form__input _req" placeholder="Žinutė">
               </div>
               <div class="form__item">

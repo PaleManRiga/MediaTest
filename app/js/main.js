@@ -61,13 +61,21 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 const swiper = new Swiper('.swiper-container', {
     // Optional parameters
-    slidesPerView: 3,
+    slidesPerView: 1,
     loop: true,
-    spaceBetween: 88,
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    spaceBetween: 44,
+    
+    breakpoints: {
+        769: {
+            slidesPerView: 3,
+            spaceBetween: 88,
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+        }
     },
+    // Navigation arrows
+    
   });

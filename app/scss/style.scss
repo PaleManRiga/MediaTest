@@ -28,10 +28,15 @@ li {
   margin: 0 auto;
   padding: 0 15px;
 }
-
+.header {
+  margin-bottom: 200px;
+}
+.menu__icon {
+  display: none;
+}
 .header__navigation {
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   background-color: #fff;
   top: 0;
   max-width: 1307px;
@@ -65,6 +70,8 @@ li {
   max-height: 787px;
   height: 100vh;
   background: rgb(239, 245, 255);
+  
+
   background: linear-gradient(
     90deg,
     rgba(239, 245, 255, 1) 0%,
@@ -72,6 +79,7 @@ li {
   );
 }
 .header__hero-title {
+  position: absolute;
   @include q700;
   font-size: 50px;
   line-height: 60px;
@@ -79,6 +87,7 @@ li {
   width: 100%;
   margin: 0 0 0 92px;
   padding-top: 45px;
+  z-index: 50;
 }
 
 .bg_rectangle {
@@ -144,7 +153,7 @@ li {
   }
 }
 .swiper-slide {
-  z-index: 5;
+  // z-index: 5;
 }
 .slider__item, .swiper-slide {
   position: relative;
@@ -191,14 +200,11 @@ li {
 // flats
 
 .flats {
-  margin-top: 177px;
+  // margin-top: 177px;
 }
 .flats__box-btns {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   select {
-    position: relative;
     appearance: none;
     margin: 60px 46px 0 37px;
     @include q700;
@@ -514,4 +520,5 @@ li {
 
 .swiper-container {
   z-index: 5;
+  padding-top: 250px;
 }

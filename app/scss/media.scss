@@ -1,0 +1,223 @@
+@import "vars";
+@import "fonts";
+
+@media (max-width:1313px){
+    .news__items {
+        justify-content: space-evenly;
+    }
+}
+@media(max-width:1251px) {
+    .flats__box-btns {
+        select {
+          max-width: 200px;
+          font-size: 18px;
+        }
+      }
+}
+@media(max-width:1105px){
+    .flats__box-btns {
+        padding-top: 20px;
+        select {
+          display: block;
+          max-width: 250px;
+          width: 100%;
+          margin: 10px auto;
+          text-align-last: center;
+        }
+      }
+      .contact__inner {
+          display: block;
+      }
+      .contact__people {
+          clip-path: none;
+          max-width: none;
+          height: auto;
+      }
+      .contact__people-items {
+        padding: 25px 0;
+      }
+      .contact__people-item {
+          margin: 0 auto;
+      }
+
+      .contact__form {
+        margin: 0 auto;
+        max-width: 500px;
+        width: 100%;
+    }
+}
+@media(max-width: 908px){
+    .news__items {
+    }
+    .news__item {
+        margin-bottom: 20px;
+        // width: 300px;
+        // height: 300px;
+    }
+}
+@media(max-width: 850px) {
+    .header__hero-title {
+        max-width: 300px;
+        font-size: 25px;
+    }
+    .container {
+        width: 100%;
+
+    }
+    .flats__filters {
+        font-size: 15px;
+        margin: 20px 0 0 0;
+        overflow: scroll;
+        div {
+            margin-right: 100px;
+            
+        }
+    }
+    .flats__items {
+        overflow: scroll;
+    }
+    .flats__item {
+        font-size: 15px;
+       div + div{
+         margin-left: 100px;
+       }
+    }
+}
+@media (max-width:769px) {
+    .container {
+        padding: 0;
+    }
+    .header__hero {
+        margin-top: 144px;
+    }
+    .header__navigation {
+        display: block;
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 5px;
+        .logo {
+            font-size: 18px;
+        }
+    }
+    .header__navigation-list{
+        font-size: 15px;
+        li {
+            display: block;
+            & + li {
+                margin: 0;
+            }
+        }
+    }
+
+    
+    .contact__people-item--img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact__people-item{
+        .name {
+            font-size: 22px;
+        }
+        .email {
+            font-size: 16px;
+        }
+        .tel {
+            font-size: 14px;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next  {
+        display: none;
+    }
+    .footer__inner {
+        display: block;
+    }
+    .footer__menu--items {
+        display: block;
+        margin: 0 auto;
+        max-width: 225px;
+        width: 100%;
+    }
+    .footer__menu--item {
+        margin-bottom: 20px;
+    }
+    .footer__logos {
+        margin: 0 auto;
+        max-width: 100px;
+    }
+}
+
+@media(max-width: 480px) {
+    .news__btn {
+        margin-top: 0;
+        padding: 13px 62px 13px 36px;
+        font-size: 15px;
+
+    }
+    .header__hero-title {
+        max-width: 200px;
+        font-size: 25px;
+    }
+    .news__item {
+        width: 250px;
+    }
+    .news__item-img {
+        width: 250px;
+        height: 250px;
+        .news__item-text{
+            font-size: 18px;
+        }
+    }
+    .contact__people-item--info {
+        .name {
+            font-size: 18px;
+        }
+        .email {
+            font-size: 14px;
+        }
+        .tel {
+            font-size: 12px;
+        }
+    }
+    .contact__people-item--img {
+        width: 80px;
+        height: 80px;
+    }
+    .contact__form {
+        .checkbox__label {
+            &::after {
+                margin-left: 4px;
+            }
+        }
+        .form__title {
+            font-size: 26px;
+            line-height: 32px;
+        }
+        .form__item {
+            input {
+                font-size: 16px;
+                text-align: center;
+            }
+            label {
+                font-size: 16px;
+                line-height: 24px;
+                padding-left: 4px;
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 359px) {
+    .contact__people-item--img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+
+
+
